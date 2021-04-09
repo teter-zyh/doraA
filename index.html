@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				position: relative;
+				background: #07BEEA;
+				/*background: url(img/timg.gif);*/
+				
+			}
+			.head{
+				width: 400px;
+				height: 400px;
+				background-color: #039be6;
+				border-radius: 50%;
+				margin: 100px auto;
+				position: absolute;
+				top: -90px;
+				left: 566px;
+				border: 1px solid #000;
+				z-index: 2;
+			}
+			.fice{
+				width: 350px;
+				height: 310px;
+				background: #fff;
+				border-radius: 50%;
+				position: absolute;
+				bottom: 10px;
+				left: 26px;
+				border: 1px solid #000;
+			}
+			.eye1{
+				width: 80px;
+				height: 95px;
+				border-radius: 50%;
+				border: 1px solid #000;
+				float: left;
+				top: -30px;
+				left: 94px;
+				position: absolute;
+				background: #fff;
+				
+			}
+			.eye2{
+				width: 80px;
+				height: 95px;
+				border-radius: 50%;
+				border: 1px solid #000;
+				float: left;
+				top: -30px;
+				left: 178px;
+				position: absolute;
+				background: #FFF;
+				
+			}
+			.zuoyan{
+				width: 28px;
+				height: 40px;
+				border-radius: 50%;
+				position: absolute;
+				background: #241615;
+				top: 42px;
+				left: 46px;
+			}
+			.youyan{
+				width: 28px;
+				height: 40px;
+				border-radius: 50%;
+				position: absolute;
+				background: #241615;
+				top: 42px;
+				left: 6px;
+			}
+			.p1{
+				width: 8px;
+				height: 12px;
+				border-radius: 50%;
+				background: #fff;
+				position: absolute;
+				top: 16px;
+				left: 14px;
+			}
+			.p2{
+				width: 8px;
+				height: 12px;
+				border-radius: 50%;
+				background: #fff;
+				position: absolute;
+				top: 16px;
+				left: 6px;
+			}
+			.bizi{
+				width: 38px;
+				height: 38px;
+				background: #e30011;
+				border: 1px solid black;
+				border-radius: 50%;
+				position: absolute;
+				top: 56px;
+				left: 156px;
+			}
+			.bz{
+				width: 10px;
+				height: 10px;
+				background: #fff;
+				border-radius: 50%;
+				position: absolute;
+				top: 10px;
+				left: 10px;
+			}
+			.zui{
+				width: 250px;
+				height: 200px;
+				border-radius: 80%;
+				border-bottom: 2px solid #000;
+				position: absolute;
+				top: 50px;
+				left: 54px;
+			}
+			.p3{
+				width: 1px;
+				height: 155px;
+				background: #000;
+				border-bottom: 1px solid #000;
+				position: absolute;
+				top: 95px;
+				left: 176px;
+			}
+			.huzi1{
+				width: 120px;
+				height: 1px;
+				border-bottom:1px solid #000;
+				transform: rotate(20deg);
+				position: absolute;
+				border-radius: 50%;
+				top: 110px;
+				left: 36px;
+			}
+			.huzi2{
+				width: 120px;
+				border-bottom:1px solid #000;
+				transform: rotate(0deg);
+				position: absolute;
+				top: 150px;
+				left: 36px;
+				height: 1px;
+				border-radius: 50%;
+			}
+			.huzi3{
+				width: 120px;
+				border-bottom:1px solid #000;
+				transform: rotate(-20deg);
+				position: absolute;
+				top: 190px;
+				left: 36px;
+				border-radius: 50%;
+				height: 1px;
+			}
+			.huzi4{
+				width: 120px;
+				border-bottom:1px solid #000;
+				transform: rotate(-20deg);
+				position: absolute;
+				top: 110px;
+				right: 36px;
+				border-radius: 50%;
+				height: 1px;
+			}
+			.huzi5{
+				width: 120px;
+				border-bottom:1px solid #000;
+				transform: rotate(0deg);
+				position: absolute;
+				top: 150px;
+				right: 36px;
+				border-radius: 50%;
+				height: 1px;
+			}
+			.huzi6{
+				width: 120px;
+				border-bottom:1px solid #000;
+				transform: rotate(20deg);
+				position: absolute;
+				top: 190px;
+				right: 36px;
+				border-radius: 50%;
+				height: 1px;
+			}
+			.tong{
+				width: 160px;
+				height: 130px;
+				border-radius: 50%;
+				border: 2px solid #000;
+				background: #000;
+				position: absolute;
+				top: 300px;
+				left: 124px;
+				background: #f1e2b7;
+			}
+			.tong1{
+				width: 156px;
+				height: 120px;
+				border-radius: 50%;
+				border: 2px solid #000;
+				background: #000;
+				position: absolute;
+				top: -1px;
+				left: 0px;
+				background: #f1e2b7;
+			}
+			.tong2{
+				width: 154px;
+				height: 114px;
+				border-radius: 50%;
+				border: 1px solid #000;
+				background: #000;
+				position: absolute;
+				top: -1px;
+				left: 0px;
+				background: #a06c5e;
+			}
+			.zuoshou{
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				background: #fff;
+				position: absolute;
+				top: 360px;
+				left: 70px;
+				border: 2px solid #000;
+			}
+			.youshou{
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				background: #fff;
+				position: absolute;
+				top: 360px;
+				right: 70px;
+				border: 2px solid #000;
+			}
+			.shenti{
+				width: 230px;
+				height: 200px;
+				border-radius: 50%;
+				position: absolute;
+				top: 380px;
+				left: 650px;
+				background: #fff;
+				border:1px solid #000;
+			}
+			.dai{
+				width: 120px;
+				height: 80px;
+				position: absolute;
+				top: 90px;
+				left: 54px;
+				background: #fff;
+				border-radius: 0 0 50% 50%;
+				border:1px solid black;
+			}
+			.zgebo{
+				width: 120px;
+				height: 80px;
+				position: absolute;
+				top: 30px;
+				left: -90px;
+				background: #039be6;
+				border: 1px solid #000;
+				border-radius: 90% 80% 80% 90%;
+				transform: rotate(-45deg);
+			}
+			.ygebo{
+				width: 120px;
+				height: 80px;
+				position: absolute;
+				top: 30px;
+				right: -90px;
+				background: #039be6;
+				border: 1px solid #000;
+				border-radius: 90% 80% 80% 90%;
+				transform: rotate(-135deg);
+			}
+			.du{
+				width: 230px;
+				height: 214px;
+				border: 1px solid #000;
+				background: #039be6;
+				position: absolute;
+				top: 0;
+				left: -3;
+				z-index: -1;
+			}
+			.di{
+				width: 232px;
+				height: 10px;
+				top: 212px;
+				border-top: 1px solid #000;
+				position: absolute;
+				border-radius: 50%;
+				background: #07BEEA;
+			}
+			.zjiao{
+				width: 120px;
+				height: 150px;
+				border-radius: 50%;
+				position: absolute;
+				top: 102px;
+				left: -54px;
+				background: #fff;
+				border: 1px solid #000000;
+				transform: rotate(-24deg);
+			}
+			.yjiao{
+				width: 120px;
+				height: 150px;
+				border-radius: 50%;
+				position: absolute;
+				top: 102px;
+				right: -54px;
+				background: #fff;
+				border: 1px solid #000000;
+				transform: rotate(24deg);
+			}
+			.qipao{
+				width: 300px;
+				height: 200px;
+				border-radius: 50%;
+				background: url(img/timg.gif) ;
+				background-size: 300px 200px ;
+				position: absolute;
+				top: -50px;
+				left: 175px;
+				border: 1px solid #000;
+				z-index: 2;
+			}
+			.qipao2{
+				width: 120px;
+				height: 50px;
+				border-radius: 50%;
+				/*background: url(img/timg.gif) ;*/
+				background-color: #fff;
+				background-size: 150px 50px ;
+				position: absolute;
+				top: 140px;
+				left: 370px;
+				border: 1px solid #000;
+				z-index: 1;
+			}
+			.qipao3{
+				width: 100px;
+				height: 50px;
+				border-radius: 50%;
+				/*background: url(img/timg.gif) ;*/
+				background-color: #fff;
+				background-size: 100px 100px ;
+				position: absolute;
+				top: 180px;
+				left: 460px;
+				border: 1px solid #000;
+			}
+			.box11{
+				width: 110px;
+				height: 80px;
+				margin: 50px auto;
+				position: relative;
+				animation: move .6s infinite;
+				top: 96px;
+				left: 300px;
+			}
+			.div1{
+				width: 50px;
+				height: 80px;
+				background: red;
+				border-radius: 50px 50px 0 0;
+				transform: rotate(45deg);
+				position: absolute;
+				left: 21px;
+				top: 0;
+			}
+			.div2{
+				transform: rotate(-45deg);
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			@keyframes move{
+				from{
+					transform: scale(1);
+				}
+				to{
+					transform: scale(1.2);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="head">
+			<div class="fice">
+				<div class="eye1">
+					<div class="zuoyan">
+						<p class="p1"></p>
+					</div>
+				</div>
+				<div class="eye2">
+					<div class="youyan">
+						<p class="p2">
+							
+						</p>
+					</div>
+				</div>
+				<div class="bizi">
+					<p class="bz"></p>
+				</div>
+				<div class="zui"></div>
+				<p class="p3"></p>
+				<div class="huzi1"></div>
+				<div class="huzi2"></div>
+				<div class="huzi3"></div>
+				<div class="huzi4"></div>
+				<div class="huzi5"></div>
+				<div class="huzi6"></div>
+			</div>
+			<div class="tong">
+				<div class="tong1">
+					<div class="tong2"></div>
+				</div>
+			</div>
+			<div class="zuoshou"></div>
+			<div class="youshou"></div>
+		</div>
+		<div class="shenti">
+			<div class="koudai">
+				<div class="dai"></div>
+			</div>
+			<div class="zgebo"></div>
+			<div class="ygebo"></div>
+			<div class="du"></div>
+			<div class="di"></div>
+			<div class="zjiao"></div>
+			<div class="yjiao"></div>
+			
+			</div>
+			</div>
+			
+		</div>
+		<div class="box11">
+			<div class="div1"></div>
+			<div class="div1 div2"></div>
+		</div>
+		<div class="box11">
+			<div class="div1"></div>
+			<div class="div1 div2"></div>
+		</div>
+		<div class="box11">
+			<div class="div1"></div>
+			<div class="div1 div2"></div>
+		</div>
+		<div class="qipao"></div>
+		<div class="qipao2"></div>
+		<div class="qipao3"></div>
+		
+	</body>
+</html>
+
+
+
+
